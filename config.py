@@ -1,0 +1,1 @@
+MAX_READ_SIZE = 10_000
