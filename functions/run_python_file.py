@@ -28,3 +28,26 @@ def run_python_file(working_directory: str, file_path: str, args: list[str] | No
     response += f"STDERR: {retval.stderr}"
 
     return response
+
+schema_run_python_file = {
+    "type": "function",
+    "function": {
+        "name": "run_python_file",
+        "description": "Executes a python script in the working directory tree.",
+        "parameters": {
+            "type": "object",
+            "required": ["file_path", "args"],
+            "properties": {
+                "file_path": {
+                    "type": "string",
+                    "description": "File path of the python script, relative to the working directory",
+                },
+                "args": {
+                    "type": "array",
+                    "items": "string",
+                    "description": "Positional arguments to be passed to the python script.",
+                },
+            },
+        },
+    },
+}

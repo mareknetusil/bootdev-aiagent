@@ -22,3 +22,21 @@ def get_file_content(working_directory: str, file_path: str) -> str:
 
     return content
 
+
+schema_get_files_content = {
+    "type": "function",
+    "function": {
+        "name": "get_files_content",
+         "description": "Reads content of a file.",
+         "parameters": {
+             "type": "object",
+             "properties": {
+                 "file_path": {
+                     "type": "string",
+                     "description": "Path to a file within the working directory tree, relative to the working directory",
+                 },
+             },
+             "required": ["file_path"],
+         },
+    }
+}
