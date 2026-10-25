@@ -26,8 +26,8 @@ def get_file_content(working_directory: str, file_path: str) -> str:
 schema_get_files_content = {
     "type": "function",
     "function": {
-        "name": "get_files_content",
-         "description": "Reads content of a file.",
+        "name": "get_file_content",
+         "description": "Reads text content of a file.",
          "parameters": {
              "type": "object",
              "properties": {

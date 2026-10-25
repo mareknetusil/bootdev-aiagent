@@ -33,7 +33,7 @@ schema_run_python_file = {
     "type": "function",
     "function": {
         "name": "run_python_file",
-        "description": "Executes a python script in the working directory tree.",
+        "description": "Executes a python file as a program in the working directory tree. It returns the output of the execution to stdout/stderr",
         "parameters": {
             "type": "object",
             "required": ["file_path", "args"],
